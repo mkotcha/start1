@@ -1,0 +1,53 @@
+body {
+  background-color: #666666;
+}
+
+#postit-container {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-around;
+}
+
+.postit-yellow {
+  background: linear-gradient(180deg, palegoldenrod 70%, rgb(126, 126, 126) 120%);
+  rotate: -10deg;
+}
+
+.postit-green {
+  background: linear-gradient(180deg, palegreen 70%, rgba(126, 126, 126) 120%);
+  rotate: 8deg;
+}
+
+.postit-purple {
+  background: linear-gradient(180deg, mediumpurple 70%, rgba(126, 126, 126) 120%);
+  rotate: -12deg;
+}
+
+[class|="postit"] {
+  background-color: white;
+  width: 240px;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: rotate 0.2s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 3px 3px 4px 2px rgba(0, 0, 0, 0.2);
+}
+
+[class|="postit"]:hover {
+  z-index: 2;
+  transition: rotate 0.5s, transform 0.8s, box-shadow 0.8s;
+  rotate: 0deg;
+  transform: scale(1.4);
+  box-shadow: 10px 10px 10px 6px rgba(0, 0, 0, 0.6);
+}
+
+[class|="postit"] h2 {
+  font-size: 2em;
+}
+[class|="postit"] p {
+  padding: 2em;
+}
